@@ -26,20 +26,13 @@ resource "aws_api_gateway_method" "http-crud-tutorial-api_method_put" {
 resource "aws_api_gateway_resource" "http-crud-tutorial-api_resource_id" {
   rest_api_id = aws_api_gateway_rest_api.http-crud-tutorial-api.id
   parent_id   = aws_api_gateway_rest_api.http-crud-tutorial-api.root_resource_id
-  path_part   = var.item-id
+  path_part   = root_resource_id/var.item-id
 }
 
 resource "aws_api_gateway_method" "http-crud-tutorial-api_method_get_id" {
   rest_api_id   = aws_api_gateway_rest_api.http-crud-tutorial-api.id
   resource_id   = aws_api_gateway_resource.http-crud-tutorial-api_resource_id.id
   http_method   = "GET"
-  authorization = "NONE"
-}
-
-resource "aws_api_gateway_method" "http-crud-tutorial-api_method_put_id" {
-  rest_api_id   = aws_api_gateway_rest_api.http-crud-tutorial-api.id
-  resource_id   = aws_api_gateway_resource.http-crud-tutorial-api_resource_id.id
-  http_method   = "PUT"
   authorization = "NONE"
 }
 
