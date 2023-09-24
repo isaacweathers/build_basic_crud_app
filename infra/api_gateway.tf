@@ -16,9 +16,3 @@ resource "aws_api_gateway_method" "http-crud-tutorial-api_method" {
   authorization = "NONE"
 }
 
-resource "aws_api_gateway_resource" "usersResource" {
-  rest_api_id = aws_api_gateway_rest_api.http-crud-tutorial-api.id
-  parent_id   = aws_api_gateway_rest_api.http-crud-tutorial-api.root_resource_id # In this case, the parent id should the gateway root_resource_id.
-  path_part   = "items"
-}
-
