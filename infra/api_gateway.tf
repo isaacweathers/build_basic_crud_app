@@ -6,7 +6,7 @@ resource "aws_api_gateway_rest_api" "http-crud-tutorial-api" {
 resource "aws_api_gateway_resource" "http-crud-tutorial-api_resource" {
   rest_api_id = aws_api_gateway_rest_api.http-crud-tutorial-api.id
   parent_id   = aws_api_gateway_rest_api.http-crud-tutorial-api.root_resource_id
-  path_part   = "items"
+  path_part   = "items/{id}"
 }
 
 resource "aws_api_gateway_method" "http-crud-tutorial-api_method" {
