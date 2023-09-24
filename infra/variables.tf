@@ -1,4 +1,4 @@
 variable "item-id" {
   type = string
-  default = ""
+  default = "{id}"
 }
