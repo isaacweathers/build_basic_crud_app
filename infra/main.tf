@@ -23,7 +23,7 @@ provider "aws" {
 
 
 resource "aws_dynamodb_table" "example" {
-  name           = "terradform"
+  name           = "http-crud-tutorial"
   billing_mode   = "PROVISIONED"
   hash_key       = "id"
   attribute {
