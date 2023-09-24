@@ -30,8 +30,8 @@ resource "aws_dynamodb_table" "example" {
     name = "id"
     type = "N"
   }
-  read_capacity  = 20
-  write_capacity = 20
+  read_capacity  = 5
+  write_capacity = 5
   tags = {
     Name        = "dynamodb-table-1"
     Environment = "dev"
